@@ -92,6 +92,48 @@
                 </td>
 
               </tr>
+              <tr class="table-primary">
+                <th scope="row"><i class="fa-regular fa-circle"></i></i></th>
+                <td>Task2</td>
+                <td>Tom</td>
+                <td>{{ Task.date_assigned }}</td>
+                <td>{{ Task.date_due }}</td>
+                <td>High</td>
+                <td>Incomplete</td>
+                <td>
+                    <button class="btn btn-success">
+                        <a href="{% url 'view_task' Task.id %}"><i class="fa-regular fa-folder-open" style="color: black;"> Open</i></a>
+                    </button>  &nbsp; 
+                    <form method="post" action="{% url 'delete_task' Task.id %}" style="margin-top: 10px;">
+                        
+                        <button type="submit" class="btn btn-danger delete-task" style="margin-bottom: 5px;">
+                            <i class="fa-regular fa-trash-can delete-icon" style="color: black;"> Delete</i>
+                        </button>
+                    </form>
+                </td>
+
+              </tr>
+              <tr class="table-primary">
+                <th scope="row"><i class="fa-regular fa-circle"></i></i></th>
+                <td>Task3</td>
+                <td>Jhon</td>
+                <td>{{ Task.date_assigned }}</td>
+                <td>{{ Task.date_due }}</td>
+                <td>Medium</td>
+                <td>Incomplete</td>
+                <td>
+                    <button class="btn btn-success">
+                        <a href="{% url 'view_task' Task.id %}"><i class="fa-regular fa-folder-open" style="color: black;"> Open</i></a>
+                    </button>  &nbsp; 
+                    <form method="post" action="{% url 'delete_task' Task.id %}" style="margin-top: 10px;">
+                        
+                        <button type="submit" class="btn btn-danger delete-task" style="margin-bottom: 5px;">
+                            <i class="fa-regular fa-trash-can delete-icon" style="color: black;"> Delete</i>
+                        </button>
+                    </form>
+                </td>
+
+              </tr>
             </tbody>
           
           </table>
